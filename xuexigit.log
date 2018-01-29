@@ -1,9 +1,0 @@
-git init 新建仓库
-git status 查看当前仓库的状态
-git diff  查看暂存区的更改
-git add 把修改文件放入暂存区
-git commit -m "add distributed" 提交到master
-git log --pretty=online 查看从最近到最远的提交日志
-git reset --hard HEAD^把版本回滚到上一个版本,也可以会到未来的版本。
-git reflog 后悔药,查看命令历史
-
