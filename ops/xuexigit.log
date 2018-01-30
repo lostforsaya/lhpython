@@ -1,0 +1,37 @@
+git init 新建仓库
+git status 查看当前仓库的状态
+git diff  查看暂存区的更改
+git add 把修改文件放入暂存区
+git commit -m "add distributed" 提交到仓库
+git log --pretty=oneline 查看从最近到最远的提交日志
+git reset --hard HEAD^把版本回滚到上一个版本,也可以会到未来的版本。
+git reflog 后悔药,查看命令历史
+git checkout -- readme.txt 如果暂存区有变更没有提交到master，则回复到暂存区，如果暂存区是干净的，则回滚本地工作区
+git reset HEAD file 暂存区的修改撤销掉
+git rm 从版本库中删除文件
+git checkout -b dev 创建一个dev分支,并切换到此分支下 等价于:git branch dev ; git checkout dev
+git branch 查看当前分支
+git merge dev 把dev分支的修改合并到master分支上
+git branch -d dev 删除dev分支
+git log --graph --pretty=oneline --abbrev-commit 用图标查看分支的合并情况
+git merge --no-ff -m "merge with no-ff"  dev 以--no-ff参数合并分支，合并后的历史有分支，可以看出曾经做过分支。而fast forward合并看不出曾经做过分支合并。
+git stash 将工作现场暂时存储起来，去做其他工作。
+git stash apply && git stash drop 恢复工作现场，并在stash上删除
+git stash pop 恢复工作现场时，同时把stash内容也删了
+git stash list 列出暂存的工作现场
+git branch -D [name] 强行删除未合并到主干上的分支
+git remote -v 查看远程库的信息
+git push origin branch-name 本地推送分支到远程库
+git checkout -b branch-name origin/branch-name 本地创建和远程分支对应的分支
+git branch --set-upstream branch-name origin/branch-name 建立本地分支和远程分支的对应关联
+git pull 从远处抓取分支
+git tag v0.9 [commit_id] 给历史版本打标签，不带commit_id是默认给最新提交的版本打标签。
+git show v0.9 标签不是按时间顺序列出，而是按照字母排序的。
+git tag -a v0.1 -m "version 0.1 released" 3628164 创建带有说明的标签
+git tag -s v0.2 -m "signed version 0.2 released" fec145a 用私钥签名一个标签
+git tag -d v0.1 删除标签
+git push origin <tagname> 推送某个标签到远程库
+git push origin --tags 一次性推送全部尚未推送到远程库的本地标签
+
+
+
